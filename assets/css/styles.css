@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'Omori'; 
+    src: url('../fonts/OMORI_GAME2.ttf'); 
+  }
+body {
+    margin: 0;
+    font-family: Omori;
+    background-color: #f0f0f0;
+  }
+
+#contenedor_juego {
+    position: relative; 
+    width: 100%;
+    height: 100vh; 
+    background-color: #000000;
+    background-image: url(../img/fondo.png);
+    background-repeat: no-repeat;
+    background-position: center top 175px;
+    background-attachment: fixed;
+    background-size: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    overflow: visible; 
+}
+
+.bloque_nombre {
+    position: absolute;
+    display: flex;
+    bottom: 162px; 
+    left: calc(50% - 348px);
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    padding-bottom: 7px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    line-height: 1.2;
+    font-size: 32px;
+    z-index: 10;
+    width: auto;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.bloque_texto {
+    background-color: black;
+    color: white;
+    padding: 10px 15px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    font-size: 30px;
+    width: 660px; 
+    height: 120px;
+    line-height: 0.9;
+    text-align: left;
+    overflow: hidden;
+    margin-top: 5px; 
+    margin-bottom: 10px;
+    white-space: normal;
+}
+
+.indicador_estatico {
+    position: absolute;
+    bottom: 10px;
+    left: calc(50% - -290px);
+    width: 45px;
+    height: 30px;
+    background-image: url('../img/indicador.png');
+    background-repeat: no-repeat;
+}
+
+.sprite_wrapper {
+    position: absolute;
+    bottom: 162px;
+    left: calc(50% - -197px);
+    width: 145px;
+    height: 145px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
+
+.sprite_personaje {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenedor_opciones {
+    position: absolute;
+    bottom: 162px;
+    right: calc(50% - 348px);
+    width: max-content;
+    min-width: 50px;
+    height: auto;
+    padding: 2px 0;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+  }
+
+.opcion_objeto {
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    color: white;
+    font-size: 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    margin: 5px 0;
+    line-height: 0.6; 
+    text-transform: uppercase;
+  }
+
+.indicador {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/indicador.png);
+    background-repeat: no-repeat;
+  }
+
+

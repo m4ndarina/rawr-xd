@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Omori'; 
+    src: url('../fonts/OMORI_GAME2.ttf'); 
+  }
+body {
+    margin: 0;
+    font-family: Omori;
+    background-image: url(../img/fondo_principal.png);
+  }
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 10px;
+    max-width: 85%; 
+    margin: 70px auto 70px auto;
+}
+
+.fila {
+    display: -webkit-flex;
+    display: flex;
+    gap: 30px;
+}
+
+.bloque {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; 
+    align-items: center;
+    gap: 250px;
+    padding: 10px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    background-color: black;
+  }
+
+.bloque img {
+    max-width: 250px;
+    height: auto;
+    display: block;
+}
+
+.bloque img.corazon{
+    max-width: none;
+    width: 150px;
+}
+
+.columna {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    height: 150px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    background-color: black;
+  }
+
+  .reloj {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px; 
+    color: white;
+    font-size: 25px;
+}
+
+  #contador {
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    width: 375px;
+}
+
+.bloque_opciones {
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center; 
+    align-items: center;
+    min-height: 250px;
+    gap: 250px;
+    padding: 10px;
+    border: 3px solid white;
+    outline: 1.5px solid black;
+    background-color: black;
+}
+
+.bloque_opciones img {
+    width: 40px;
+    height: auto;
+    display: block;
+    filter: invert(100%);
+}
+
+.bloque_opciones img.excepcion{
+    filter: invert(0%);
+}
+
+.bloque_opciones img.separador{
+    width: 60px;
+    filter: invert(0%);
+}

@@ -1,0 +1,115 @@
+@font-face {
+    font-family: 'Omori'; 
+    src: url('../fonts/OMORI_GAME2.ttf'); 
+  }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Omori;
+    background-image: url(../img/fondo_principal.png);
+}
+
+.album {
+    position: relative;
+    width: 650px;
+    height: 800px;
+    transition: transform 0.5s;
+}
+
+.hoja {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    perspective: 1500px;
+
+}
+
+.anverso,
+.reverso {
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left;
+    transition: transform 0.5s;
+}
+
+.anverso {
+    z-index: 1;
+    backface-visibility: hidden;
+    border-left: 3px solid black;
+}
+
+.reverso {
+    z-index: 0;
+}
+
+/* ANVERSO ES FRENTE, REVERSO ES ATRÁS. HE REPETIDO TANTAS VECES ESTA PALABRA QUE ESTOY CAYENDO EN LA LOCURA. */
+
+.anverso_contenido,
+.reverso_contenido {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.reverso_contenido {
+    transform: rotateY(180deg)
+}
+
+.voltear .anverso,
+.voltear .reverso {
+    transform: rotateY(-180deg);
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    margin: 30px;
+    transition: transform 0.5s;
+}
+
+button img {
+    width: 50px; 
+    height: auto;
+}
+
+i {
+    font-size: 50px;
+    color: gray;
+}
+
+#h1 {
+    z-index: 3;
+}
+
+#h2 {
+    z-index: 2;
+}
+
+#h3 {
+    z-index: 1;
+}
